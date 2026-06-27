@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emulator Core</title>
+    <style>
+        /* Hilangkan semua jarak agar game memenuhi layar */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000; overflow: hidden; }
+        #game-container { width: 100%; height: 100%; }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <script>
+        // Tangkap nama sistem (core) dan file game dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const core = urlParams.get('core');
+        const gameUrl = urlParams.get('gameUrl');
+
+        if (core && gameUrl) {
+            // Konfigurasi EmulatorJS
+            window.EJS_player = '#game-container';
+            window.EJS_core = core;
+            window.EJS_gameUrl = gameUrl;
+            window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+
+            // Panggil mesin emulatornya
+            const script = document.createElement('script');
+            script.src = 'https://cdn.emulatorjs.org/stable/data/loader.js';
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
