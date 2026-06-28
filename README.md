@@ -23,32 +23,47 @@
   * **Pagination:** Efficiently handles large game libraries without compromising browser performance.
 * **Modular Architecture:** Clean, maintainable, and scalable React codebase separating UI components, data, and logic.
 
-## 🛠️ Technology Stack
+## 🚀 Getting Started (Local Development)
 
-* **Core Framework:** React.js (v18) initialized with [Vite](https://vitejs.dev/) for blazing-fast development.
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/) for rapid, utility-first UI design.
-* **Emulation Engine:** [EmulatorJS](https://emulatorjs.org/) for executing ROMs securely within the browser canvas.
+Follow these instructions to set up and run the project on your local machine.
 
-## 📂 Project Structure
+### Prerequisites
+* [Node.js](https://nodejs.org/) (v16.x or higher)
+* npm or yarn package manager
 
-The codebase is organized modularly for scalability:
+### Installation
 
-```text
-retro-arcade/
-├── public/                 # Static assets
-│   ├── covers/             # Game box art and thumbnails (3:4 aspect ratio)
-│   ├── roms/               # Game ROM files (ignored by Git)
-│   └── favicon.png         # Pixel-art site icon
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── Header.jsx      # Global top navigation & categories
-│   │   ├── Sidebar.jsx     # Search bar & paginated game list
-│   │   ├── RetroPlayer.jsx # EmulatorJS wrapper and configuration
-│   │   └── Footer.jsx      # Credits and legal disclaimer
-│   ├── data/
-│   │   └── games.js        # Centralized game library database
-│   ├── App.jsx             # Main application layout and state logic
-│   └── main.jsx            # React DOM entry point
-├── .gitignore              # Configured to exclude heavy ROM files
-├── tailwind.config.js      # Custom Tailwind theme settings
-└── package.json            # Project metadata and dependencies
+1. **Clone the repository:**
+   ```bash
+   npm install
+   npm run dev
+
+## 🎮 How to Add Games (ROMs)
+Due to GitHub's file size limits and strict copyright policies, game ROMs are NOT included in this repository. You must provide your own legally obtained files.
+
+To add a game:
+
+Place your ROM file (e.g., mario.nes) into the public/roms/ directory.
+
+Place the corresponding cover image (ideally 600x800px WebP) into the public/covers/ directory.
+
+Open src/data/games.js and add a new entry to the array:
+
+JavaScript
+{
+  id: 99,
+  title: "Your Game Title",
+  core: "nes", // Must match EmulatorJS core names (e.g., nes, snes, psx)
+  gameUrl: "/roms/your_game_file.nes",
+  cover: "/covers/your_cover_image.webp"
+}
+Note: The .gitignore file is configured to prevent .nes, .sfc, .bin, and .iso files from being pushed to the remote repository.
+
+## ⚖️ Legal Disclaimer
+This project is created strictly for educational and historical preservation purposes.
+
+No ROMs are hosted, distributed, or monetized by this repository.
+
+Retro Arcade operates purely as a frontend web interface. Users are solely responsible for ensuring they possess the legal rights to any ROM files they play using this platform.
+
+All trademarks, logos, and game intellectual properties belong to their respective copyright holders.
