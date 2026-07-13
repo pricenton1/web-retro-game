@@ -8,7 +8,7 @@ export const gameLibrary = [
   { id: 4, title: "Pac-Man", core: "nes", gameUrl: `${baseURL}/storage/v1/object/public/roms/nes/Pac-Man.nes`, cover: "/covers/nes_donkeykong.webp" },
   { id: 5, title: "Zelda: A Link to the Past", core: "snes", gameUrl: `${baseURL}/storage/v1/object/public/roms/snes/Legend-of-Zelda-The-A-Link-to-the-Past.sfc`, cover: "/covers/nes_donkeykong.webp" },
   { id: 6, title: "Super Mario World", core: "snes", gameUrl: `${baseURL}/storage/v1/object/public/roms/snes/Super-Mario-World.sfc`, cover: "/covers/nes_donkeykong.webp" },
-  { id: 7, title: "Crash Bandicoot", core: "psx", gameUrl: "/roms/crash.bin" },
+  { id: 7, title: "Dynasty Warriors", core: "pcsx_rearmed", gameUrl: "https://archive.org/cors/dynasty-warriors/Dynasty%20Warriors.chd" },
   { id: 8, title: "Mortal Kombat", core: "snes", gameUrl: `${baseURL}/storage/v1/object/public/roms/snes/Mortal-Kombat.sfc` },
   { id: 9, title: "Street Fighter II", core: "snes", gameUrl: `${baseURL}/storage/v1/object/public/roms/snes/Street-Fighter-II.sfc` },
   { id: 10, title: "Mega Man", core: "nes", gameUrl: `${baseURL}/storage/v1/object/public/roms/nes/Mega-Man.nes` },
@@ -25,4 +25,6 @@ export const gameLibrary = [
   { id: 21, title: "Soccer", core: "nes", gameUrl: `${baseURL}/storage/v1/object/public/roms/nes/Soccer.nes` },
   { id: 22, title: "Choujin Sentai Jetman", core: "nes", gameUrl: `${baseURL}/storage/v1/object/public/roms/nes/Choujin-Sentai-Jetman.nes` },
   { id: 23, title: "Metal Slug Advance", core: "nes", gameUrl: `${baseURL}/storage/v1/object/public/roms/nes/Metal-Slug-Advance.nes` },
+  { id: 24, title: "Crash Team Racing", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Crash%20Team%20Racing.chd` },
+  { id: 25, title: "Metal Slug X", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Metal%20Slug%20X.chd` },
 ];
