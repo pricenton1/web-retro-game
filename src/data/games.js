@@ -37,4 +37,12 @@ export const gameLibrary = [
   { id: 33, title: "WarCraft II", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/WarCraft%20II%20-%20The%20Dark%20Saga.chd` },
   { id: 34, title: "Captain Tsubasa J", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Captain%20Tsubasa%20J%20-%20Get%20in%20the%20Tomorrow.chd` },
   { id: 35, title: "Final Fantasy VI", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Final%20Fantasy%20VI.chd` },
+  { id: 36, title: "NASCAR Rumble", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/NASCAR%20Rumble.chd` },
+  { id: 37, title: "Naruto", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Naruto.chd` },
+  { id: 38, title: "Medal Of Honor", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Medal%20of%20Honor%20-%20Underground.chd` },
+  { id: 39, title: "Power Rangers - Time Force", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Power%20Rangers%20-%20Time%20Force.chd` },
+  { id: 40, title: "Point Blank 3", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Point%20Blank%203.chd` },
+  { id: 41, title: "One Piece - Grand Battle 1", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/One%20Piece%20-%20Grand%20Battle%201.chd` },
+  { id: 42, title: "Olimpyc Soccer", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Olympic%20Soccer.chd` },
+  { id: 43, title: "Harvest Moon - Back To Nature", core: "pcsx_rearmed", gameUrl: `https://archive.org/cors/ps1-rip-chd-ck/Harvest%20Moon%20-%20Back%20To%20Nature.chd` },
 ];
