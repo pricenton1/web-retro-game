@@ -1,4 +1,22 @@
 import React from 'react';
+import iconNes from '../assets/icons/iconNes.png';
+import iconSnes from '../assets/icons/iconSnes.png';
+import iconPsx from '../assets/icons/iconPsx.png';
+
+const coreIcons = {
+  "nes": iconNes,
+  "snes": iconSnes,
+  "psx": iconPsx,
+  "pcsx_rearmed": iconPsx, 
+};
+
+// TAMBAHKAN INI: Kamus untuk mengubah nama asli core menjadi nama keren di layar
+const categoryLabels = {
+  "All": "All",
+  "nes": "NES",
+  "snes": "SNES",
+  "pcsx_rearmed": "PlayStation" // <-- Di sini keajaibannya terjadi
+};
 
 const Header = ({ categories, activeCategory, setActiveCategory }) => {
   return (
@@ -12,13 +30,27 @@ const Header = ({ categories, activeCategory, setActiveCategory }) => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-all duration-200 ${
+            className={`flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-all duration-200 ${
               activeCategory === category
                 ? 'bg-purple-600 text-white shadow-[0_0_15px_rgba(147,51,234,0.4)]'
                 : 'bg-gray-900 text-gray-400 hover:bg-gray-800 hover:text-white border border-gray-800'
             }`}
           >
-            {category}
+            {category === "All" ? (
+              <span className="text-lg">🎮</span>
+            ) : coreIcons[category] ? (
+              <img 
+                src={coreIcons[category]} 
+                alt={`Ikon ${category}`} 
+                className="w-5 h-5 object-contain" 
+              />
+            ) : (
+              <span className="text-lg">🕹️</span>
+            )}
+            
+            {/* UBAH BAGIAN INI: Gunakan kamus label. 
+                Jika namanya tidak ada di kamus, tampilkan nama aslinya */}
+            <span>{categoryLabels[category] || category}</span>
           </button>
         ))}
       </div>

@@ -8,18 +8,18 @@ import RetroPlayer from './components/RetroPlayer';
 function App() {
   const [activeGame, setActiveGame] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("Semua");
+  const [activeCategory, setActiveCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
   const categories = useMemo(() => {
     const cores = gameLibrary.map(game => game.core);
     const uniqueCores = [...new Set(cores)];
-    return ["Semua", ...uniqueCores];
+    return ["All", ...uniqueCores];
   }, []);
 
   const filteredGames = gameLibrary.filter((game) => {
-    const matchCategory = activeCategory === "Semua" || game.core === activeCategory;
+    const matchCategory = activeCategory === "All" || game.core === activeCategory;
     const matchSearch = game.title.toLowerCase().includes(searchTerm.toLowerCase());
     return matchCategory && matchSearch;
   });
@@ -68,7 +68,8 @@ function App() {
              </h2>
              {activeGame && (
                <span className="bg-purple-900/50 text-purple-400 border border-purple-500/50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-                 System: {activeGame.core}
+                 {/* BAGIAN YANG DIUBAH: Logika untuk mengubah pcsx_rearmed menjadi PlayStation */}
+                 System: {activeGame.core === "pcsx_rearmed" ? "PLAYSTATION" : activeGame.core.toUpperCase()}
                </span>
              )}
           </div>
